@@ -1,0 +1,28 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+}
+<link href="~/Content/corousel.css" rel="stylesheet" />
+<script type="text/javascript">
+	function classToggle() {
+		var el = document.querySelector('.icon-cards__content');
+		el.classList.toggle('step-animation');
+	}
+
+	document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+</script>
+<div style="padding-top:275px">
+	<figure class="icon-cards mt-3">
+			<div class="icon-cards__content">
+				<div class="icon-cards__item d-flex align-items-center justify-content-center">
+
+					<img src="~/Images/Fire/fire-fighting-system-500x500.jpg" opacity="10px"/>
+					</div>
+				<div class="icon-cards__item d-flex align-items-center justify-content-center">
+				<img src="~/Images/Office/18_09_2017_14_17_46_d6fd156c3c910a081a32d8c029df0dae_deqcg62jh0.jpg" opacity="10px" />
+				</div>
+				<div class="icon-cards__item d-flex align-items-center justify-content-center">
+				<img src="~/Images/Laboratory/chemistry-lab-furniture-500x500.jpg" opacity="10px" />
+				</div>
+			</div>
+		</figure>
+</div>

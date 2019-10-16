@@ -1,0 +1,366 @@
+﻿
+@{
+	ViewBag.Title = "Services";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Courosel2.css" rel="stylesheet" />
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/courousel.js"></script>
+
+<div class="row pt-2">
+	<h1>
+		Our Services are as follows:
+	</h1>
+</div>
+<div class="row" style="border-style:solid;padding-top:15px;margin-top:20px;">
+	<div class="col-lg-4">
+		<ul>
+			<li onclick="showId('HVAC');">
+					HVAC
+			</li>
+			<li onclick="showId('ELECTRICAL');">
+				ELECTRICAL
+			</li>
+			<li onclick="showId('INTEROIRS');">
+				INTEROIRS
+			</li>
+			<li onclick="showId('OFFICE');">
+				OFFICE FURNITURE
+			</li>
+		</ul>
+	</div>
+	<div class="col-lg-4">
+		<ul>
+			<li onclick="showId('LAB');">
+				LABORATORY FURNIUTRE
+			</li>
+			<li onclick="showId('EXHAUST');">
+				EXHAUST SYSTEMS
+			</li>
+			<li onclick="showId('EXHAUST');">
+				FUMEHOODS
+			</li>
+			<li onclick="showId('UTILITIES');">
+				UTILITIY LINES (GAS DISTRIBUTION SYSTEMS , WATER SUPPLY)
+			</li>
+		</ul>
+	</div>
+	<div class="col-lg-4">
+		<ul>
+			<li onclick="showId('WATER');">
+				WATER TREATEMENT PLANTS
+			</li>
+			<li onclick="showId('EXHAUST');">
+				LOW VOLTAGE SYSTEMS
+			</li>
+			<li onclick="showId('FIRE');">
+				FIRE HIRDANT SYSTEMS
+			</li>
+			<li onclick="showId('BMS');">
+				BMS (BUILDING MANAGEMENT SYSTEMS)
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row" style="padding-top:235px">
+
+	@*<figure class="icon-cards mt-3">
+			<div class="icon-cards__content">
+				<div class="icon-cards__item d-flex align-items-center justify-content-center">
+
+					<img src="~/Images/floor-mounted-air-handling-units-500x500.jpg" opacity="10px"/>
+					</div>
+				<div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="~/Images/floor-mounted-air-handling-units-500x500.jpg" opacity="10px" /></div>
+				<div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="~/Images/floor-mounted-air-handling-units-500x500.jpg" opacity="10px" /></div>
+			</div>
+		</figure>*@
+
+	@*<div class="checkbox">
+			<input class="d-none" id="toggle-animation" type="checkbox" checked />
+			<label class="checkbox__checkbox" for="toggle-animation"></label>
+			<label class="checkbox__label" for="toggle-animation">Toggle animation</label>
+		</div>*@
+
+
+	@*<main>
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="hideLeft" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/18_09_2017_14_17_46_d6fd156c3c910a081a32d8c029df0dae_deqcg62jh0.jpg">
+			</div>
+			<div class="hideLeft" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/1_CRQkHZcgSA2OFoCESvkHGQ.jpeg">
+			</div>
+			<div class="prevLeftSecond" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/6537ff34f2d48d4cb49a787f9f3bae3b.png">
+			</div>
+			<div class="prev" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Banner2_New.jpg">
+			</div>
+			<div class="selected" id="five" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/chemistry-lab-furniture-500x500.jpg">
+			</div>
+			<div class="next" id="six" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/electrical-works-for-office-singapore.jpeg">
+			</div>
+			<div class="nextRightSecond" id="seven" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Flexlab0016-1030x686.jpg">
+			</div>
+			<div class="hideRight" id="eight" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/office-interiors-500x500.jpg">
+			</div>
+			<div class="hideRight" id="nine" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/giant_33247.jpg">
+			</div>
+			<div class="hideRight" id="ten" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/laboratoryxpage3.jpg">
+			</div>
+			<div class="hideRight" id="eleven" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/maxresdefault (1).jpg">
+			</div>
+			<div class="hideRight" id="twelve" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/maxresdefault (2).jpg">
+			</div>
+
+		</div>
+
+		
+
+	</main>*@
+
+
+	<main id="HVAC" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/6537ff34f2d48d4cb49a787f9f3bae3b.png">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/floor-mounted-air-handling-units-500x500.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/HVAC/water-cooling-tower-500x500.jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/maxresdefault.jpg">
+			</div>
+		</div>
+
+		@*<div class="buttons">
+				<button id="prev" onclick="moveToSelected('prev')">Prev</button>
+				<button id="next" onclick="moveToSelected('next')">Next</button>
+			</div>*@
+
+	</main>
+
+	<main id="ELECTRICAL" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prev" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Electrical/electrical-works-for-office-singapore.jpeg">
+			</div>
+			<div class="selected" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Electrical/IMG_20181027_153731.jpg">
+			</div>
+			@*<div class="prevLeftSecond" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/HVAC/water-cooling-tower-500x500.jpg">
+			</div>
+			<div class="prev" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/maxresdefault.jpg">
+			</div>*@
+		</div>
+
+		@*<div class="buttons">
+				<button id="prev" onclick="moveToSelected('prev')">Prev</button>
+				<button id="next" onclick="moveToSelected('next')">Next</button>
+			</div>*@
+
+	</main>
+
+	<main id="INTEROIRS" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="selected" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Interior/images (7).jfif">
+			</div>
+			@*<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/floor-mounted-air-handling-units-500x500.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/HVAC/water-cooling-tower-500x500.jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/HVAC/maxresdefault.jpg">
+			</div>*@
+		</div>
+
+		@*<div class="buttons">
+				<button id="prev" onclick="moveToSelected('prev')">Prev</button>
+				<button id="next" onclick="moveToSelected('next')">Next</button>
+			</div>*@
+
+	</main>
+
+	<main id="OFFICE" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftForth" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/office-interior-design-singapore-office-renovation-singapore-1.jpg">
+			</div>
+			<div class="prevLeftThird" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/maxresdefault (2).jpg">
+			</div>
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/maxresdefault (1).jpg">
+			</div>
+			<div class="prev" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/1_CRQkHZcgSA2OFoCESvkHGQ.jpeg">
+			</div>
+			<div class="selected" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/18_09_2017_14_17_46_d6fd156c3c910a081a32d8c029df0dae_deqcg62jh0.jpg">
+			</div>
+			<div class="next" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/Banner2_New.jpg">
+			</div>
+			<div class="nextRightSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/giant_33247.jpg">
+			</div>
+			<div class="nextRightThird" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/office-interiors-500x500.jpg">
+			</div>
+			<div class="nextRightForth" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Office/office-interior-design-service-500x500.jpg">
+			</div>
+			@*<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+					<img src="~/Images/HVAC/floor-mounted-air-handling-units-500x500.jpg">
+				</div>
+				<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+					<img src="~/Images/HVAC/water-cooling-tower-500x500.jpg">
+				</div>
+				<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+					<img src="~/Images/HVAC/maxresdefault.jpg">
+				</div>*@
+		</div>
+
+		@*<div class="buttons">
+				<button id="prev" onclick="moveToSelected('prev')">Prev</button>
+				<button id="next" onclick="moveToSelected('next')">Next</button>
+			</div>*@
+
+	</main>
+
+	<main id="LAB" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Laboratory/chemistry-lab-furniture-500x500.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Laboratory/Flexlab0016-1030x686.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/Laboratory/Modular-Steel-Laboratory-Furniture004.jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Laboratory/Sink_2D3Cbench_cabinet.jpg">
+			</div>
+		</div>
+	</main>
+
+	<main id="EXHAUST" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Exhaust/PP-FRP-Blower-683x1024.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Exhaust/PP-FRP-Ducting.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/Exhaust/PP-FRP-Ducts-and-Assessories--1024x683.jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Exhaust/pp-frp-exhaust-ducts-500x500.jpg">
+			</div>
+		</div>
+	</main>
+
+	<main id="UTILITIES" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Utility/14.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Utility/megafonia2.png">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/Utility/megafonia2.png">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Utility/14.jpg">
+			</div>
+		</div>
+	</main>
+
+	<main id="WATER" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Water/pharmaceutical-ro-plant-250x250.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Water/RO-Plant1.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/Water/water-treatment-plant-diagram_resize_md.png">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Water/Water-Treatment-Plant-Schematic.jpg">
+			</div>
+		</div>
+	</main>
+
+	<main id="FIRE" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Fire/fire-fighting-system-500x500.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Fire/image4261.jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="1">
+				<img src="~/Images/Fire/vesda2.jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/Fire/fire-fighting-system-500x500.jpg">
+			</div>
+		</div>
+	</main>
+
+	<main id="BMS" style="display:none;">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="prevLeftSecond" id="first" onclick="moveToSelected(this)" onfocus="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/BMS/bms1.jpg">
+			</div>
+			<div class="prev" id="second" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/BMS/download (5).jpg">
+			</div>
+			<div class="selected" id="third" onclick="moveToSelected(this)" data-ta	rget="#carousel" data-slide-to="1">
+				<img src="~/Images/BMS/download (6).jpg">
+			</div>
+			<div class="next" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/BMS/download (7).jpg">
+			</div>
+			<div class="nextRightSecond" id="four" onclick="moveToSelected(this)" data-target="#carousel" data-slide-to="0">
+				<img src="~/Images/BMS/images.jpg">
+			</div>
+		</div>
+	</main>
+</div>
+
